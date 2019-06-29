@@ -14,6 +14,14 @@ RUN apt-get update && \
     && \
     git clone https://github.com/xmrig/xmrig.git && \
     cd xmrig && \
+    echo && \
+    echo "before:" && \
+    cat src/donate.h | grep DonateLevel && \
+    sed -i s:"DonateLevel = 5":"DonateLevel = 0":g src/donate.h && \
+    sed -i s:"DonateLevel = 1":"DonateLevel = 0":g src/donate.h && \
+    echo && \
+    echo "after:" && \
+    cat src/donate.h | grep DonateLevel && \
     mkdir build && \
     cd build && \
     cmake .. && \
