@@ -2,6 +2,8 @@ FROM debian:9-slim
 
 LABEL maintainer "trick@vanstaveren.us"
 
+ENV VERSION=v2.15.4-beta
+
 WORKDIR /src
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y \
@@ -14,6 +16,7 @@ RUN apt-get update && \
     && \
     git clone https://github.com/xmrig/xmrig.git && \
     cd xmrig && \
+    git checkout $VERSION && \
     echo && \
     echo "before:" && \
     cat src/donate.h | grep DonateLevel && \
