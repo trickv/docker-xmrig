@@ -1,8 +1,6 @@
-FROM debian:9.2
+FROM debian:9
 
-LABEL maintainer "opsxcq@strm.sh"
-
-LABEL update "2018/10/18"
+LABEL maintainer "trick@vanstaveren.us"
 
 WORKDIR /src
 RUN apt-get update && \
@@ -26,7 +24,7 @@ RUN apt-get update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-RUN useradd --system --uid 666 -M --shell /usr/sbin/nologin miner
+RUN useradd --system --uid 1005 -M --shell /usr/sbin/nologin miner
 USER miner
 
 ENTRYPOINT ["xmrig"]
