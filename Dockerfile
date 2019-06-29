@@ -20,6 +20,7 @@ RUN apt-get update && \
     make && \
     cp xmrig /bin && \
     rm -Rf /src && \
+    apt-get autoremove && \
     apt-get purge -y git cmake build-essential && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
