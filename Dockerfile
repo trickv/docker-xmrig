@@ -20,7 +20,6 @@ RUN apt-get update && \
     echo && \
     echo "before:" && \
     cat src/donate.h | grep DonateLevel && \
-    sed -i s:"DonateLevel = 5":"DonateLevel = 0":g src/donate.h && \
     sed -i s:"DonateLevel = 1":"DonateLevel = 0":g src/donate.h && \
     echo && \
     echo "after:" && \
