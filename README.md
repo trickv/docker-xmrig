@@ -12,9 +12,11 @@ Bellow an example usage for a **2 core** system (see the `-t 2` parameter) named
 **miner01** (using the password field to set the miner name with `-p miner01`).
 This also sets a container memory limit of 50M, and CPU shares to 512. YMMV.
 
+I highly recommend pinning a version when you run the container. "latest" won't always be stable; the upstream beta versions have bugs and for ordinary quickstart mining, just use the latest stable release on Docker Hub.
+
 ```
 docker run --restart unless-stopped --name xmrig -d --read-only -m 50M -c 512 \
-    trickv/xmrig \
+    trickv/xmrig:v2.14.4 \
     -o stratum+tcp://pool.supportxmr.com:5555 -p miner01 \
     -t 2 \
     -u <Your Wallet Address>
