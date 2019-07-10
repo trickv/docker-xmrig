@@ -18,3 +18,9 @@ docker run --restart unless-stopped --name miner -d --read-only -m 50M -c 512 st
    -a cryptonight -o stratum+tcp://pool.supportxmr.com:5555 -p Miner01 -k -t 2 \
    --donate-level=1 --cpu-priority 0 -u <Your Wallet Address>
 ```
+
+## How to build
+
+```
+docker build -t myxmrig .
+```
