@@ -33,6 +33,7 @@ RUN apt-get update && \
     cmake .. && \
     make && \
     cp xmrig /bin && \
+    cd / && \
     rm -Rf /src && \
     apt-get purge -y git && \
     apt-get autoremove -y && \
