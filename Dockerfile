@@ -32,7 +32,7 @@ RUN apt-get update && \
     cd build && \
     cmake .. && \
     make && \
-    cp xmrig /bin && \
+    cp xmrig /usr/local/bin && \
     cd / && \
     rm -Rf /src && \
     apt-get purge -y git && \
