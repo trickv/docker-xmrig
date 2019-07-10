@@ -27,9 +27,7 @@ RUN apt-get update && \
     wget -O - $URL | tar xfz - && \
     ln -s xmrig-$VERSION xmrig && \
     cd xmrig && \
-    cat src/donate.h | grep DonateLevel && \
     sed -i s:"DonateLevel = 1":"DonateLevel = 0":g src/donate.h && \
-    cat src/donate.h | grep DonateLevel && \
     mkdir build && \
     cd build && \
     cmake .. && \
