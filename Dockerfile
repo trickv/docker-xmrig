@@ -40,7 +40,6 @@ RUN apt-get update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-RUN useradd --system --uid 1005 -M --shell /usr/sbin/nologin miner
-USER miner
+USER nobody
 
 ENTRYPOINT ["xmrig"]
