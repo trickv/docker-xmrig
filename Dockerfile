@@ -44,4 +44,3 @@ RUN useradd --system --uid 1005 -M --shell /usr/sbin/nologin miner
 USER miner
 
 ENTRYPOINT ["xmrig"]
-
