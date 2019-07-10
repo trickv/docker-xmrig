@@ -1,8 +1,6 @@
 # XMRig container
 
-<!--
-[![Docker Pulls](https://img.shields.io/docker/pulls/strm/xmrig.svg?style=plastic)](https://hub.docker.com/r/strm/xmrig/)
--->
+[![Docker Pulls](https://img.shields.io/docker/pulls/trickv/xmrig.svg?style=plastic)](https://hub.docker.com/r/trickv/xmrig/)
 
 [XMRig](https://github.com/xmrig/xmrig) is a high performance Monero (XMR) CPU miner originally based on
 cpuminer-multi with heavy optimizations/rewrites and removing a lot of legacy
