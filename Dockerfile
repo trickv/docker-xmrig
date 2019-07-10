@@ -25,16 +25,10 @@ RUN apt-get update && \
     wget \
     && \
     wget -O - $URL | tar xfz - && \
-    ls -l && \
     ln -s xmrig-$VERSION xmrig && \
-    ls -l && \
     cd xmrig && \
-    echo && \
-    echo "before:" && \
     cat src/donate.h | grep DonateLevel && \
     sed -i s:"DonateLevel = 1":"DonateLevel = 0":g src/donate.h && \
-    echo && \
-    echo "after:" && \
     cat src/donate.h | grep DonateLevel && \
     mkdir build && \
     cd build && \
