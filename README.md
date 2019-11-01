@@ -16,7 +16,8 @@ I highly recommend pinning a version when you run the container. "latest" won't 
 
 ```
 docker run --restart unless-stopped --name xmrig -d --read-only -m 50M -c 512 \
-    trickv/xmrig:v2.14.4 \
+    trickv/xmrig:v3.2.0 \
+    --coin=monero \
     -o stratum+tcp://pool.supportxmr.com:5555 -p miner01 \
     -t 2 \
     -u <Your Wallet Address>

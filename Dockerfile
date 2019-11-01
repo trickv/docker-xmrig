@@ -3,7 +3,7 @@ FROM debian:10-slim
 LABEL maintainer "trick@vanstaveren.us"
 
 # URL: https://github.com/xmrig/xmrig/archive/v2.14.1.tar.gz
-ENV VERSION=2.14.4
+ENV VERSION=3.2.0
 ENV URL=https://github.com/xmrig/xmrig/archive/v$VERSION.tar.gz
 
 # install upstream build essentials in a different layer as it rarely will significantly change
@@ -15,6 +15,7 @@ RUN apt-get update && \
     cmake \
     libuv1-dev \
     libmicrohttpd-dev \
+    libhwloc-dev \
     libssl-dev
 
 WORKDIR /src
